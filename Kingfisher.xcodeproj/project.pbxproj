@@ -1318,6 +1318,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4B29444D1C3D01B20088C3E7 /* Build configuration list for PBXNativeTarget "Kingfisher-macOS" */;
 			buildPhases = (
+				3DB4FF691FD87EDE00919CB6 /* [KF]CommonCrypto */,
 				4B2944431C3D01B20088C3E7 /* Sources */,
 				4B2944441C3D01B20088C3E7 /* Frameworks */,
 				4B2944451C3D01B20088C3E7 /* Headers */,
@@ -1420,6 +1421,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D13F49DF1BEDA67C00CE335D /* Build configuration list for PBXNativeTarget "Kingfisher-tvOS" */;
 			buildPhases = (
+				3DB4FF671FD87E4700919CB6 /* [KF]CommonCrypto */,
 				D13F49D11BEDA67C00CE335D /* Sources */,
 				D13F49D21BEDA67C00CE335D /* Frameworks */,
 				D13F49D31BEDA67C00CE335D /* Headers */,
@@ -1438,6 +1440,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D16799F21C4E74460020FD12 /* Build configuration list for PBXNativeTarget "Kingfisher-watchOS" */;
 			buildPhases = (
+				3DB4FF6A1FD87EE500919CB6 /* [KF]CommonCrypto */,
 				D16799E61C4E74460020FD12 /* Sources */,
 				D16799E71C4E74460020FD12 /* Frameworks */,
 				D16799E81C4E74460020FD12 /* Headers */,
@@ -1514,6 +1517,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = D1ED2D4E1AD2D09F00CFC3EB /* Build configuration list for PBXNativeTarget "Kingfisher-iOS" */;
 			buildPhases = (
+				3DB4FF681FD87EB700919CB6 /* [KF]CommonCrypto */,
 				D1ED2D301AD2D09F00CFC3EB /* Sources */,
 				D1ED2D311AD2D09F00CFC3EB /* Frameworks */,
 				D1ED2D321AD2D09F00CFC3EB /* Headers */,
@@ -2021,6 +2025,62 @@
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
+		};
+		3DB4FF671FD87E4700919CB6 /* [KF]CommonCrypto */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[KF]CommonCrypto";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"${BUILT_PRODUCTS_DIR}/CommonCrypto\"\ncat <<EOF > \"${BUILT_PRODUCTS_DIR}/CommonCrypto/module.modulemap\"\nmodule CCommonCrypto [system] {\n    header \"${SDKROOT}/usr/include/CommonCrypto/CommonCrypto.h\"\n    export *\n}\nEOF\n";
+		};
+		3DB4FF681FD87EB700919CB6 /* [KF]CommonCrypto */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[KF]CommonCrypto";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"${BUILT_PRODUCTS_DIR}/CommonCrypto\"\ncat <<EOF > \"${BUILT_PRODUCTS_DIR}/CommonCrypto/module.modulemap\"\nmodule CCommonCrypto [system] {\n    header \"${SDKROOT}/usr/include/CommonCrypto/CommonCrypto.h\"\n    export *\n}\nEOF\n";
+		};
+		3DB4FF691FD87EDE00919CB6 /* [KF]CommonCrypto */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[KF]CommonCrypto";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"${BUILT_PRODUCTS_DIR}/CommonCrypto\"\ncat <<EOF > \"${BUILT_PRODUCTS_DIR}/CommonCrypto/module.modulemap\"\nmodule CCommonCrypto [system] {\n    header \"${SDKROOT}/usr/include/CommonCrypto/CommonCrypto.h\"\n    export *\n}\nEOF\n";
+		};
+		3DB4FF6A1FD87EE500919CB6 /* [KF]CommonCrypto */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[KF]CommonCrypto";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"${BUILT_PRODUCTS_DIR}/CommonCrypto\"\ncat <<EOF > \"${BUILT_PRODUCTS_DIR}/CommonCrypto/module.modulemap\"\nmodule CCommonCrypto [system] {\n    header \"${SDKROOT}/usr/include/CommonCrypto/CommonCrypto.h\"\n    export *\n}\nEOF\n";
 		};
 		41D9897B9F81A40122967826 /* 📦 Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -2531,7 +2591,7 @@
 				PRODUCT_NAME = Kingfisher;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = Sources/CommonCrypto/macOSX;
+				SWIFT_INCLUDE_PATHS = "${BUILT_PRODUCTS_DIR}/CommonCrypto";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -2562,7 +2622,7 @@
 				PRODUCT_NAME = Kingfisher;
 				SDKROOT = macosx;
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = Sources/CommonCrypto/macOSX;
+				SWIFT_INCLUDE_PATHS = "${BUILT_PRODUCTS_DIR}/CommonCrypto";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
@@ -2762,9 +2822,7 @@
 				PRODUCT_NAME = Kingfisher;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "";
-				"SWIFT_INCLUDE_PATHS[sdk=appletvos*]" = Sources/CommonCrypto/appleTVOS;
-				"SWIFT_INCLUDE_PATHS[sdk=appletvsimulator*]" = Sources/CommonCrypto/appleTVSimulator;
+				SWIFT_INCLUDE_PATHS = "${BUILT_PRODUCTS_DIR}/CommonCrypto";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
@@ -2797,9 +2855,7 @@
 				PRODUCT_NAME = Kingfisher;
 				SDKROOT = appletvos;
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "";
-				"SWIFT_INCLUDE_PATHS[sdk=appletvos*]" = Sources/CommonCrypto/appleTVOS;
-				"SWIFT_INCLUDE_PATHS[sdk=appletvsimulator*]" = Sources/CommonCrypto/appleTVSimulator;
+				SWIFT_INCLUDE_PATHS = "${BUILT_PRODUCTS_DIR}/CommonCrypto";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
@@ -2831,9 +2887,7 @@
 				PRODUCT_NAME = Kingfisher;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "";
-				"SWIFT_INCLUDE_PATHS[sdk=watchos*]" = Sources/CommonCrypto/watchOS;
-				"SWIFT_INCLUDE_PATHS[sdk=watchsimulator*]" = Sources/CommonCrypto/watchSimulator;
+				SWIFT_INCLUDE_PATHS = "${BUILT_PRODUCTS_DIR}/CommonCrypto";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = 4;
@@ -2863,9 +2917,7 @@
 				PRODUCT_NAME = Kingfisher;
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "";
-				"SWIFT_INCLUDE_PATHS[sdk=watchos*]" = Sources/CommonCrypto/watchOS;
-				"SWIFT_INCLUDE_PATHS[sdk=watchsimulator*]" = Sources/CommonCrypto/watchSimulator;
+				SWIFT_INCLUDE_PATHS = "${BUILT_PRODUCTS_DIR}/CommonCrypto";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
@@ -3117,9 +3169,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.onevcat.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Kingfisher;
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "";
-				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = Sources/CommonCrypto/iPhoneOS;
-				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = Sources/CommonCrypto/iPhoneSimulator;
+				SWIFT_INCLUDE_PATHS = "${BUILT_PRODUCTS_DIR}/CommonCrypto";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
@@ -3148,9 +3198,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = "com.onevcat.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = Kingfisher;
 				SKIP_INSTALL = YES;
-				SWIFT_INCLUDE_PATHS = "";
-				"SWIFT_INCLUDE_PATHS[sdk=iphoneos*]" = Sources/CommonCrypto/iPhoneOS;
-				"SWIFT_INCLUDE_PATHS[sdk=iphonesimulator*]" = Sources/CommonCrypto/iPhoneSimulator;
+				SWIFT_INCLUDE_PATHS = "${BUILT_PRODUCTS_DIR}/CommonCrypto";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				SWIFT_SWIFT3_OBJC_INFERENCE = Off;
 				SWIFT_VERSION = 4.0;
